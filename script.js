@@ -1,4 +1,3 @@
-
 const button = document.getElementById("myButton");
 const results = document.getElementById("results");
 
@@ -18,7 +17,6 @@ button.addEventListener("click", function () {
 
     // Using querySelectorAll
     const allDescriptions = document.querySelectorAll(".description");
-
 
     // Display results below the button
     results.innerHTML = `
