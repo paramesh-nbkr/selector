@@ -1,44 +1,44 @@
+// Get the button
 const button = document.getElementById("myButton");
-const results = document.getElementById("results");
 
+// Get the output area
+const output = document.getElementById("output");
+
+// Run when button is clicked
 button.addEventListener("click", function () {
 
     // Selecting by Class Name
-    const descriptions = document.getElementsByClassName("description");
+    const descriptions =
+        document.getElementsByClassName("description");
 
     // Selecting by Tag Name
-    const allParagraphs = document.getElementsByTagName("p");
+    const allParagraphs =
+        document.getElementsByTagName("p");
 
     // Selecting by Name
-    const buttonByName = document.getElementsByName("myButton");
+    const buttonByName =
+        document.getElementsByName("myButton");
 
     // Using querySelector
-    const firstParagraph = document.querySelector(".description");
+    const firstParagraph =
+        document.querySelector(".description");
 
     // Using querySelectorAll
-    const allDescriptions = document.querySelectorAll(".description");
+    const allDescriptions =
+        document.querySelectorAll(".description");
 
-    // Display results below the button
-    results.innerHTML = `
-        <h2>Selector Results</h2>
+    // Display information on screen
+    output.innerHTML = `
+        <h3>DOM Selector Information</h3>
 
-        <h3>getElementsByClassName()</h3>
-        <p>Found ${descriptions.length} elements</p>
+        <p><b>Class Name:</b> ${descriptions.length} elements found</p>
 
-        <h3>getElementsByTagName()</h3>
-        <p>Found ${allParagraphs.length} paragraph elements</p>
+        <p><b>Tag Name:</b> ${allParagraphs.length} paragraph(s) found</p>
 
-        <h3>getElementsByName()</h3>
-        <p>Found ${buttonByName.length} button(s)</p>
+        <p><b>Name:</b> ${buttonByName.length} button(s) found</p>
 
-        <h3>querySelector()</h3>
-        <p>${firstParagraph.textContent}</p>
+        <p><b>querySelector:</b> ${firstParagraph.textContent}</p>
 
-        <h3>querySelectorAll()</h3>
-        <ul>
-            ${Array.from(allDescriptions)
-                .map(element => `<li>${element.textContent}</li>`)
-                .join("")}
-        </ul>
+        <p><b>querySelectorAll:</b> ${allDescriptions.length} elements found</p>
     `;
 });
